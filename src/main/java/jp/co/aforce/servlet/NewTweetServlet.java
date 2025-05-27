@@ -24,7 +24,7 @@ public class NewTweetServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		try {
 			if (session != null) {
-				if (author.length() > 5) {
+				if (author.length() > 255) {
 					session.setAttribute("tweet", "ツイートに失敗しました");
 				} else {
 					session.setAttribute("tweet", "ツイートに成功しました");
